@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bed Haven - Premium Bed Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #444;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      font-weight: 300;
+    }
+
+    nav {
+      text-align: center;
+      padding: 15px;
+      background-color: #222;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #5a2d82;
+    }
+
+    .hero {
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1601978977732-8a7b16c1f7c5');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 120px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product {
+      background-color: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .product img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 10px;
+      font-size: 1.4em;
+      color: #333;
+    }
+
+    .product-info .price {
+      font-size: 1.3em;
+      font-weight: 700;
+      color: #5a2d82;
+      margin-bottom: 15px;
+    }
+
+    .product-info .description {
+      color: #666;
+      margin-bottom: 15px;
+      font-size: 0.95em;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #5a2d82;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #4a1f6b;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
+
+    footer p {
+      font-size: 0.95em;
+    }
+
+    @media(max-width: 768px) {
+      .hero h2 {
+        font-size: 2.2em;
+      }
+      
+      .hero p {
+        font-size: 1.1em;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+        padding: 40px 15px;
+      }
+
+      nav a {
+        margin: 5px 10px;
+        font-size: 0.9em;
+      }
+    }
+
+    @media(max-width: 480px) {
+      header h1 {
+        font-size: 2em;
+      }
+      
+      .hero {
+        padding: 80px 15px;
+      }
+      
+      .hero h2 {
+        font-size: 1.8em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bed Haven</h1>
+    <p>Your one-stop shop for all bed sizes and styles</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Comfort You Can Count On</h2>
+    <p>Discover our premium collection of beds designed for the perfect night's sleep. Quality craftsmanship meets unbeatable comfort.</p>
+  </section>
+
+  <section class="products" id="products">
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1601979031925-17d2d11c3d78" alt="King Size Bed">
+      <div class="product-info">
+        <h3>King Size Bed</h3>
+        <p class="price">R9,999</p>
+        <p class="description">Spacious and luxurious, perfect for couples who want maximum comfort and room to spread out.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1585559601242-4c2c6a9bd5a1" alt="Queen Size Bed">
+      <div class="product-info">
+        <h3>Queen Size Bed</h3>
+        <p class="price">R7,499</p>
+        <p class="description">The perfect balance of space and practicality. Ideal for most bedrooms and sleeping arrangements.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1615873968403-89e888d019d4" alt="Double Bed">
+      <div class="product-info">
+        <h3>Double Bed</h3>
+        <p class="price">R5,999</p>
+        <p class="description">Comfortable for two people while fitting perfectly in smaller bedrooms. Great value for money.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1615874959473-913d1b7d9272" alt="Single Bed">
+      <div class="product-info">
+        <h3>Single Bed</h3>
+        <p class="price">R3,999</p>
+        <p class="description">Perfect for children's rooms, guest bedrooms, or studio apartments. Compact yet comfortable.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Luxury Platform Bed">
+      <div class="product-info">
+        <h3>Luxury Platform Bed</h3>
+        <p class="price">R12,999</p>
+        <p class="description">Modern minimalist design with premium materials. Features built-in LED lighting and USB charging ports.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Upholstered Headboard Bed">
+      <div class="product-info">
+        <h3>Upholstered Headboard Bed</h3>
+        <p class="price">R8,499</p>
+        <p class="description">Elegant tufted headboard with premium fabric upholstery. Perfect for reading and relaxation.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304" alt="Wooden Four-Poster Bed">
+      <div class="product-info">
+        <h3>Wooden Four-Poster Bed</h3>
+        <p class="price">R15,999</p>
+        <p class="description">Classic solid wood construction with ornate four-poster design. Handcrafted for lasting elegance.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Storage Bed with Drawers">
+      <div class="product-info">
+        <h3>Storage Bed with Drawers</h3>
+        <p class="price">R9,499</p>
+        <p class="description">Maximize your space with built-in storage drawers. Perfect for smaller bedrooms needing extra storage.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1615873968403-89e888d019d4" alt="Memory Foam Mattress Bed">
+      <div class="product-info">
+        <h3>Memory Foam Mattress Bed</h3>
+        <p class="price">R11,999</p>
+        <p class="description">Complete bed set with premium memory foam mattress. Temperature-regulating and pressure-relieving comfort.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Adjustable Electric Bed">
+      <div class="product-info">
+        <h3>Adjustable Electric Bed</h3>
+        <p class="price">R18,999</p>
+        <p class="description">State-of-the-art adjustable bed with remote control. Perfect for reading, watching TV, or medical needs.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304" alt="Bunk Bed Set">
+      <div class="product-info">
+        <h3>Bunk Bed Set</h3>
+        <p class="price">R6,999</p>
+        <p class="description">Space-saving bunk bed perfect for children's rooms. Includes safety rails and sturdy ladder.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Canopy Bed">
+      <div class="product-info">
+        <h3>Canopy Bed</h3>
+        <p class="price">R13,499</p>
+        <p class="description">Romantic canopy bed with flowing curtains. Creates a dreamy, private sleeping sanctuary.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85" alt="Ottoman Storage Bed">
+      <div class="product-info">
+        <h3>Ottoman Storage Bed</h3>
+        <p class="price">R10,499</p>
+        <p class="description">Hydraulic lift-up ottoman bed with massive under-bed storage space. Ideal for maximizing bedroom storage.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1615873968403-89e888d019d4" alt="Daybed with Trundle">
+      <div class="product-info">
+        <h3>Daybed with Trundle</h3>
+        <p class="price">R7,999</p>
+        <p class="description">Versatile daybed that doubles as seating. Includes pull-out trundle for extra sleeping space when needed.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304" alt="Rustic Log Bed">
+      <div class="product-info">
+        <h3>Rustic Log Bed</h3>
+        <p class="price">R14,499</p>
+        <p class="description">Authentic log bed frame made from sustainable timber. Perfect for cabin-style or rustic bedroom decor.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" alt="Smart Bed with Tech">
+      <div class="product-info">
+        <h3>Smart Bed with Tech</h3>
+        <p class="price">R22,999</p>
+        <p class="description">High-tech smart bed with sleep tracking, climate control, and smartphone integration for the ultimate sleep experience.</p>
+        <a href="#" class="btn">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 Bed Haven | All Rights Reserved | Contact us: info@bedhaven.co.za | 011-123-4567</p>
+  </footer>
+
+</body>
+</html>
